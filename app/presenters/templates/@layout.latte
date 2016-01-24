@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>{ifset title}{include title|striptags} | {/ifset}Example</title>
+
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+</head>
+
+<body>
+<script>AUTOBAHN_DEBUG = true;</script>
+<script src="http://autobahn.s3.amazonaws.com/autobahnjs/latest/autobahn.min.jgz"></script>
+<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+{include content}
+
+<button id="doSomethingHeavy">Do something</button>
+<div id="output"></div>
+
+{block scripts}
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="{$basePath}/main.js"></script>
+	<script src="//nette.github.io/resources/js/netteForms.min.js"></script>
+{/block}
+</body>
+</html>
