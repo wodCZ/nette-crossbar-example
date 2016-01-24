@@ -64,7 +64,7 @@ Here we connect to websocket server, get our topics and subscribe to them.
  Then, on message, we detect method (progress, message) and do something with them.
 
 
- ## Disclaimer
+## Disclaimer
 
  This was example done in two hours including setting up project, installing dependencies and writing this doc.
 
